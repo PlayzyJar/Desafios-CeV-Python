@@ -1,0 +1,6 @@
+nome = str(input('      >>>Analizador de Nomes<<< \n>>Digite seu nome completo: ')).strip()
+print('>>Analizando... \n>>Seu nome com todas as letras minúsculas: {}'.format(nome.lower()))
+print('>>Seu nome com todas as letras maiúsculas: {}'.format(nome.upper()))
+print('>>Seu nome tem {} letras ao todo'.format(len(nome)-nome.count(' ')))
+nletras = nome.split()
+print('>>Seu primeiro nome é {} e ele tem {} letras'.format(nletras[0], len(nletras[0])))

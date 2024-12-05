@@ -1,0 +1,90 @@
+from time import sleep
+from random import choice
+playagain = '1'
+
+while playagain == '1':
+    print('\n', '=-='*20, '\n', '{:^60}'.format('ROCK, PAPER & SCISOR'), '\n', '=-='*20)
+    lista = ['1', '2', '3']
+    machine = choice(lista)
+    sleep(1)
+    frase1 = '>>Escolha sua arma: '
+    for c in range(1, len(frase1)):
+        print(frase1[c], end='')
+        sleep(0.25)
+    print('\n[1] PEDRA')
+    sleep(0.8)
+    print('[2] PAPEL')
+    sleep(0.8)
+    print('[3] TESOURA')
+    sleep(0.5)
+    player = str(input('>>Sua arma: '))
+    print('JOKEN')
+    sleep(0.5)
+    print('PO!!!')
+    if player == '1' and machine == '1' or player == '2' and machine == '2' or player == '3' and machine == '3':
+        sleep(1)
+        print('='*60, '', '\n>>Ambos escolheram armas IGUAIS!')
+        sleep(1)
+        print('>>EMPATE!!! No one win.\n', '='*60)
+    elif player == '1' and machine == '2':
+        sleep(1)
+        print('', '='*60, '\n>>Player One escolheu PEDRA!')
+        sleep(1)
+        print('>>Máquina escolheu PAPEL!')
+        sleep(1)
+        print('>>Máquina Wins! Fawnless Victory\n', '='*60)
+    elif player == '1' and machine == '3':
+        sleep(1)
+        print('', '='*60, '\n>>Player One escolheu PEDRA!')
+        sleep(1)
+        print('>>Máquina escolheu TESOURA!')
+        sleep(1)
+        print('>>Player One Wins! Fawnless Victory\n', '='*60)
+    elif player == '2' and machine == '1':
+        sleep(1)
+        print('', '='*60, '\n>>Player 1 escolheu PAPEL!')
+        sleep(1)
+        print('>>Máquina escolheu PEDRA!')
+        sleep(1)
+        print('>>Player One Wins! Fawnless Victory\n', '='*60)
+    elif player == '2' and machine == '3':
+        sleep(1)
+        print('', '='*60, '\n>>Player 1 escolheu PAPEL!')
+        sleep(1)
+        print('>>Máquina escolheu TESOURA!')
+        sleep(1)
+        print('>>Máquina Wins! Fawnless Victory\n', '='*60)
+    elif player == '3' and machine == '1':
+        sleep(1)
+        print('', '='*60, '\n>>Player 1 escolheu TESOURA!')
+        sleep(1)
+        print('>>Máquina escolheu PEDRA!')
+        sleep(1)
+        print('>>Máquina Wins! Fawnless Victory\n', '='*60)
+    elif player == '3' and machine == '2':
+        sleep(1)
+        print('', '='*60, '\n>>Player 1 escolheu TESOURA!')
+        sleep(1)
+        print('>>Máquina escolheu PAPEL!')
+        sleep(1)
+        print('>>Player One Wins! Fawnless Victory\n', '='*60)
+    elif player == 'st0nks':
+        sleep(3)
+        print('You has been unlocked STONKS arm!')
+        print('Player One win with')
+        sleep(0.5)
+        print('ULTIMATE')
+        sleep(0.5)
+        print('ULTR4')
+        sleep(1.5)
+        print('STONKS!')
+    else:
+        print('>>Escolha uma das armas acima!')
+    sleep(3)
+    print('>>Play Again?')
+    sleep(0.8)
+    print('[1] Yes')
+    sleep(0.8)
+    print('[2] No')
+    sleep(0.5)
+    playagain = str(input('>>Your Choice: '))
